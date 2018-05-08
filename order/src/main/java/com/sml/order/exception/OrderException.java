@@ -1,11 +1,13 @@
 package com.sml.order.exception;
 
 import com.sml.order.enums.ResultEnum;
+import lombok.Getter;
 
 /**
  * Created by 神迷的亮
  * 2018-05-08 14:44
  */
+@Getter
 public class OrderException extends RuntimeException
 {
 
