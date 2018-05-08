@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Config-Client" />
+        <module name="Config-Server" />
+        <module name="Eureka-Client" />
+        <module name="Eureka-Server" />
+        <module name="order" />
+        <module name="Server-Zipkin" />
+        <module name="Service-Feign" />
+        <module name="service-miya" />
+        <module name="Service-Ribbon" />
+        <module name="Service-Zuul" />
+        <module name="Springcloud-Learning" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="demsun" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
