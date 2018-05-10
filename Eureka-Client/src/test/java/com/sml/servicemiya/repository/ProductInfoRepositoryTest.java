@@ -8,9 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by 神迷的亮
@@ -29,5 +28,15 @@ public class ProductInfoRepositoryTest
         List<ProductInfo> productInfoList = repository.findByProductStatus(0);
 
         Assert.assertTrue(productInfoList.size() > 0);
+    }
+
+    @Test
+    public void findId()
+    {
+        List<String> idList = Arrays.asList("123456", "123457", "123458");
+
+        List<ProductInfo> productInfos = repository.findByProductIdIn(idList);
+
+        Assert.assertNotNull(productInfos);
     }
 }
