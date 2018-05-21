@@ -2,6 +2,7 @@ package com.sml.servicemiya.controller;
 
 import com.sml.servicemiya.dataobject.ProductCategory;
 import com.sml.servicemiya.dataobject.ProductInfo;
+import com.sml.servicemiya.dto.CartDTO;
 import com.sml.servicemiya.service.CategoryService;
 import com.sml.servicemiya.service.ProductService;
 import com.sml.servicemiya.utils.ResultVoUtil;
@@ -10,9 +11,7 @@ import com.sml.servicemiya.vo.ProductVo;
 import com.sml.servicemiya.vo.ResultVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,5 +68,23 @@ public class ProductController
             productVoList.add(productVo);
         }
         return ResultVoUtil.success(productVoList);
+    }
+
+    /**
+     * 获取商品列表（给订单服务用的）
+     *
+     * @param productList
+     * @return
+     */
+    @PostMapping("/listForOrder")
+    public List<ProductInfo> listForOrder(@RequestBody List<String> productList)
+    {
+        return productService.findList(productList);
+    }
+
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList)
+    {
+        productService.decreaseStock(cartDTOList);
     }
 }

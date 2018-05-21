@@ -1,6 +1,7 @@
 package com.sml.servicemiya.service;
 
 import com.sml.servicemiya.dataobject.ProductInfo;
+import com.sml.servicemiya.dto.CartDTO;
 
 import java.util.List;
 
@@ -11,4 +12,8 @@ import java.util.List;
 public interface ProductService
 {
     List<ProductInfo> findUpAll();
+
+    List<ProductInfo> findList(List<String> productIdList);
+
+    void decreaseStock(List<CartDTO> cartDTOList);
 }

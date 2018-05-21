@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: order
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      profile: dev
+      username: SunMingLianger
+      password: s321000
+      uri: https://github.com/SunMingLianger/config-repo
+    stream:
+      bindings:
+        myMessage:
+          group: order
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: sunmingliang
+    password: 123456
+
+
+
+
+

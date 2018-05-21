@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
 
 
@@ -12,16 +12,32 @@ server:
 
 spring:
   application:
-    name: service-zuul
+    name: zuul
 
 zuul:
   routes:
-    api-a:
-      path: /api-a/**
-      serviceId: service-ribbon
-    api-b:
-      path: /api-b/**
-      serviceId: service-feign
+#    api-a:
+#      path: /api-a/**
+#      serviceId: service-ribbon
+#    api-b:
+#      path: /api-b/**
+#      serviceId: config
+#      sensitiveHeaders:
+    config: /myConfig/**
+
+#    config: /myconfig/**  //简便写法
+
+# 忽略路由，就是不让他路由
+#  ignored-patterns:
+#    - /**/service-zuul
+#
+management:
+  security:
+    enabled: false
+
+
+
+
 
 
 

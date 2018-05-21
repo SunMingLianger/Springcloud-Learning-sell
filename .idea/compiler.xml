@@ -6,17 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config-client" />
         <module name="Config-Client" />
+        <module name="config-server" />
         <module name="Config-Server" />
         <module name="Eureka-Client" />
+        <module name="eureka-client" />
+        <module name="eureka-server" />
         <module name="Eureka-Server" />
         <module name="order" />
+        <module name="server-zipkin" />
         <module name="Server-Zipkin" />
+        <module name="service-feign" />
         <module name="Service-Feign" />
         <module name="service-miya" />
+        <module name="service-ribbon" />
         <module name="Service-Ribbon" />
+        <module name="service-zuul" />
         <module name="Service-Zuul" />
         <module name="Springcloud-Learning" />
+        <module name="springcloud-learning" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

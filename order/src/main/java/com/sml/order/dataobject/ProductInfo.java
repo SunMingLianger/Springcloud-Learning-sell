@@ -1,4 +1,4 @@
-package com.sml.servicemiya.dataobject;
+package com.sml.order.dataobject;
 
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
