@@ -24,6 +24,8 @@ zuul:
 #      serviceId: config
 #      sensitiveHeaders:
     config: /myConfig/**
+#    忽略cookie，全部服务就可以接受cookie了，不然zuul默认是不接受cookie的
+  sensitive-headers:
 
 #    config: /myconfig/**  //简便写法
 
@@ -34,7 +36,6 @@ zuul:
 management:
   security:
     enabled: false
-
 
 
 
